@@ -1,0 +1,29 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+.roundedBtn {
+	display: inline-block;
+	width: 236px;
+	max-width: 100%;
+	padding: 15px 10px;
+	background-color: #e25c00;
+	border: 2px solid transparent;
+	border-bottom-color: #d40152;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.roundedBtn:focus, .roundedBtn:hover {
+	background-color: #ffffff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
+// 普通ボタンの拡張として使うのはおすすめしない=>角丸以外の変更の予想ができないため（実際は角丸以外の変更点もあり）＝＞重複するコードは多くあるものの、多くのスタイルが異なるため別クラスとして作成する（3つ以上のスタイル差があれば別クラスとして分離）

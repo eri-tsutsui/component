@@ -1,0 +1,41 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+.btn {
+	display: inline-block;
+	width: 300px;
+	max-width: 100%;
+	padding: 20px 10px;
+	background-color: #e25c00;
+	border: 2px solid transparent;
+	box-sizing: 0 3px 6px rgba(0, 0, 0, .16);
+	color: #ffffff;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.btn:focus, .btn:hover {
+	background-color: #ffffff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
+.btn-arrow-right {
+	position: relative;
+	padding-right: 2em;
+	padding-left: 1.38em;
+}
+.btn-arrow-right::after {
+	content: 'f061';
+	position: absolute;
+	top: 50%;
+	right: 0.83em;
+	transform: translateY(-50%);
+}
+
+// ①padding テキストが増えた時にアイコンとかぶらないようにしたいため、設置。単位にemを使用しているのは、フォントサイズが変わっても、フォントサイズの変更に合わせて自動的に左右の余白を調整するため。⇄基本形のpadding-left/ padding-rightは、テキストが増えた際にボタンの左右に到達して詰まって見えるのを防ぐ（そのため、単位はpx）

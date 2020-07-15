@@ -1,0 +1,33 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+.btn {
+	display: inline-block;
+	width: 300px;
+	max-width: 100%;
+	padding: 20px 10px;
+	background-color: #e25c00;
+	border: 2px solid transparent;
+	box-sizing: 0 3px 6px rgba(0, 0, 0, .16);
+	color: #ffffff;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.btn:focus, .btn:hover {
+	background-color: #ffffff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
+// ①display:inline-blick; 親のtext-alignに従わせる
+// ②width: 300px; 多くの場合は、ボタンの大きさはある程度統一されている。長いテキストが入る場合はボタン内で改行される、させたくない時はmin-widthを使用する（自動的に横幅が伸びる）、横幅をテキスト量に依存させたい場合は何も指定しない
+// ③max-width: 100%; スクリーンサイズが狭くなった時にボタンが見切れないようにする
+// ④padding ボタンの高さはheightで指定してはいけない＝＞長いテキストが入った場合、テキストがボタンの外に溢れてしまう（万が一、想像以上のテキスト量が入っても、最低限の見た目を担保する）
+// ⑤border ホバーすると、boder分大きさが変わるので、あらかじめボーダーをつけておく currentColorは要素自体にcolorプロパティの値が設定されていればその値。なければ直近の親のcolorプロパティの値を受け継ぐ（文字色と同じ色のボーダー色にしたい場合は効果的）
+// ⑥hoverするのではなく、tabキーを用いてページ遷移を行うユーザーに配慮（フォーカスリングに加えて、hoverと同じエフェクトが当たることにより、変化がよりわかりやすい）

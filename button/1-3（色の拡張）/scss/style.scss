@@ -1,0 +1,38 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+.btn {
+	display: inline-block;
+	width: 300px;
+	max-width: 100%;
+	padding: 20px 10px;
+	background-color: #e25c00;
+	border: 2px solid transparent;
+	box-sizing: 0 3px 6px rgba(0, 0, 0, .16);
+	color: #ffffff;
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.btn:focus, .btn:hover {
+	background-color: #ffffff;
+	border-color: currentColor;
+	color: #e25c00;
+}
+
+// 詳細度で打ち消す
+.btn--warning {
+	background-color: #f1de00;
+	color: #222222;
+}
+
+.btn--warning:focus, .btn--warning:hover {
+    color: #222222;
+	border-color: #f1de00;
+}
+

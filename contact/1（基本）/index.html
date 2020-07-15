@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>スクロールするとボタンが現れる</title>
+	<link rel="stylesheet" href="scss/style.css">
+	<link rel="stylesheet" href="scss/base/_reset-contact.css">
+</head>
+<body>
+	<h2 class="contact-tit">お問い合わせフォーム</h2>
+	<form action="" class="form">
+		<ul class="form-list">
+			<li class="form-item">
+				<p class="form-txt"><label for="name">氏名</label></p>
+				<div class="form-data"><input class="dataTxt" type="text" id="name" name="name"></div>
+			</li>
+			<li class="form-item">
+				<p class="form-txt"><label for="company">会社名</label></p>
+				<div class="form-data"><input class="dataTxt" type="text" id="company" name="company_name"></div>
+			</li>
+			<li class="form-item">
+				<p class="form-txt"><label for="email">メアド</label></p>
+				<div class="form-data"><input class="dataTxt" type="email" id="email" name="email"></div>
+			</li>
+			<li class="form-item">
+				<p class="form-txt"><label for="number">電話番号</label></p>
+				<div class="form-data"><input class="dataTxt" type="tel" id="number" name="tel"></div>
+			</li>
+			<li class="form-item">
+				<p class="form-txt"><label for="number">BALANCeを知ったきっかけ</label></p>
+				<div class="form-data"><input class="dataTxt" type="tel" id="reason" name="text"></div>
+			</li>
+			<li class="form-item">
+				<p class="form-txt"><label for="comment">お問い合わせ内容</label></p>
+				<div class="form-data"><textarea class="textArea" name="comment" id="comment" cols="30" rows="10" placeholder="お問い合わせ内容をご入力ください"></textarea></div>
+			</li>
+		</ul>
+		<div class="form-buttonArea">
+			<input class="button_submit" value="送信する" type="submit">
+		</div>
+	</form>
+	
+	<!-- Custom js -->
+	<script src="js/main.js"></script><!-- /Custom js -->
+</body>
+</html>

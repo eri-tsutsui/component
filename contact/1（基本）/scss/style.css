@@ -1,0 +1,316 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  /* 16px*62.5%=10px */
+}
+
+body {
+  color: #333333;
+  font-size: 1.6rem;
+  /* 10px*1.6=16px; */
+  letter-spacing: 0.1em;
+  font-family: "ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS Pgothic",Osaka,sans-serif,Helvetica,Helvetica Neue,Arial,Verdana;
+  background-color: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  color: #333333;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #333333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* padding,marginがない要素もあるので、絞って内部・外部余白をリセット */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, figure, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* テーブルのボーダーを一本化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 古いブラウザで起こりがちな画像の周りにブルーの線がつくのを防ぐ */
+fieldset, img {
+  border: 0;
+}
+
+/* text */
+.dataTxt {
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.4em 0.8em;
+  width: 100%;
+}
+
+.dataTxt:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+
+/* textarea */
+.textArea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  height: 100px;
+  /*   高さの指定要 */
+  padding: 0.4em 0.8em;
+  width: 100%;
+}
+
+.textArea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+
+/* radiobtn */
+.radio-test {
+  display: none;
+}
+
+.radio-test + span {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 60px;
+  /* 変更（項目名からボタンまでの距離） */
+  padding-top: 5px;
+  padding-left: 27px;
+  /* 変更(ボタンの左端から項目名までの距離*/
+  position: relative;
+  font-size: 2.2rem;
+}
+
+/* ↓ボタン外枠 */
+.radio-test + span::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 12px;
+  /* 変更 */
+  width: 12px;
+  /* 変更 */
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ↓ボタン中枠 */
+.radio-test + span::after {
+  -webkit-transform: translateY(-50%);
+  background: #3F51B5;
+  /* 変更 */
+  border: 1px solid transparent;
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  /* 変更 */
+  width: 6px;
+  /* 変更 */
+  left: 3px;
+  /* 変更 */
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+}
+
+.radio-test:checked + span::after {
+  opacity: 1;
+}
+
+/* checkbox */
+.check-test {
+  display: none;
+}
+
+.check-test + span {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 40px;
+  /* 変更 */
+  position: relative;
+  font-weight: normal;
+}
+
+/* チェックボックスの箱 */
+.check-test + span::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 30px;
+  /* 変更 */
+  width: 30px;
+  /* 変更 */
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* チェックボックスの矢印 */
+.check-test + span::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  border-bottom: 2px solid #3f51b5;
+  /* 線の太さ変更 */
+  border-left: 2px solid #3f51b5;
+  /* 線の太さ変更 */
+  content: "";
+  display: block;
+  height: 10px;
+  /* 矢印の短い部分の長さ変更 */
+  width: 15px;
+  /* 矢印の長い部分の変更 */
+  left: 3px;
+  margin-top: -0.2em;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: all 0.3s ease 0s;
+}
+
+.check-test:checked + span::after {
+  opacity: 1;
+}
+
+/* selectbox */
+.select-test {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent url(../images/select-arrow.png) no-repeat center right 20px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 0.4em 0.8em;
+  width: 100%;
+}
+
+.select-test::-ms-expand {
+  display: none;
+}
+
+.select-test:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+
+/* submitbtn */
+.button_submit {
+  -webkit-appearance: none;
+  background-color: #3F51B5;
+  /* 変更 */
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0 0 1em;
+  padding: 14px 50px;
+  /* 変更 */
+  text-decoration: none;
+  border-radius: 12px;
+  /* 追記 */
+  box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+  /* 追記 */
+  background-image: url(../images/contact-arrow.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.button_submit:hover,
+.button_submit:focus {
+  outline: none;
+}
+
+.button_submit::-moz-foucus-inner {
+  border: none;
+  padding: 0;
+}
+
+/* ファイル選択 */
+#file-test {
+  display: none;
+}
+
+#file-test-label {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  padding: 0.4em 0.8em;
+}
+
+#file-test-name {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  display: none;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.4em 0;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #000;
+}

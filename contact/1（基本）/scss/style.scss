@@ -1,0 +1,11 @@
+// scss
+@import "base/_base";
+@import "base/_reset";
+@import "base/_reset-contact";
+@import "mixin/_mixin";
+@import "setting/_variables";
+
+h2 {
+	font-size: 2rem;
+	color: #000;
+}
